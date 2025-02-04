@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Faisin</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<style>
+  @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+/*  background-color: #04AA6D;*/
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/*.container {
+  padding: 16px;
+}*/
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+/*  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/*  padding-top: 60px;*/
+}
+
+/* Modal Content/Box */
+.modal-content1 {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.b1{
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+.text{
+      color: #fff;
+      list-style: none;
+    }
+.text1{
+      color:gray;
+    }
+.size{
+      font-size: 13px;
+    }
+.t1{
+  text-decoration: none;
+  color: black;
+}
+</style>
+<body>
+                                                   <!-- navbar start -->
+<div class="container-fluid my-3">
+<div class="row">
+
+<div class="col-sm-2 d-flex justify-content-center">
+  <img src="images/fa.jpg" style="width:150px; height: 150px;">
+</div>
+
+
+<div class="col-sm-1">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal1">
+  
+  <form class="modal-content1 animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/login.jpg" style="height:100px; width:100px;" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+
+<div class="col-sm-1">
+  <button class="btn btn-primary b1" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">Beauty</button>
+
+<div class="offcanvas offcanvas-top" id="demo">
+  <div class="offcanvas-header">
+    <!-- <h1 class="offcanvas-title">Heading</h1> -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/b1.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/b2.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/b3.jpg"style="height: 300px;width: 250px;">
+      </div>
+        
+        <div class="col-sm-6">
+          
+          <div><a href="hair.html"class="t1">Hair</a></div>
+          <div><a href="makeup.html"class="t1">Makeup</a></div>
+          <div><a href="skin.html"class="t1">Skincare</a></div>
+          <div><a href="life.html"class="t1">Tutorials</a></div>
+           
+        <h4>Get Faisin Straight to your inbox</h4>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+
+</div>
+</div>
+</div>
+
+     
+<div class="col-sm-1">
+  <button class="btn btn-primary b1" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">Holiday</button>
+
+<div class="offcanvas offcanvas-top" id="demo1">
+  <div class="offcanvas-header">
+    <!-- <h1 class="offcanvas-title">Heading</h1> -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/h1.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/h2.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/h3.jpg"style="height: 300px;width: 250px;">
+      </div>
+        
+        <div class="col-sm-6">
+          
+          <div><a href="holiday.html"class="t1">THANKSGIVING</a></div>
+          <div><a href="holiday.html"class="t1">CHRISTMAS</a></div>
+          <div><a href="holiday.html"class="t1">GIFT GUIDES</a></div>
+          
+        <h4>Get Faisin Straight to your inbox</h4>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-1">
+  <button class="btn btn-primary b1" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">Family</button>
+
+<div class="offcanvas offcanvas-top" id="demo2">
+  <div class="offcanvas-header">
+    <!-- <h1 class="offcanvas-title">Heading</h1> -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/h3.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/a19.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/f1.jpg"style="height: 300px;width: 250px;">
+      </div>
+        
+        <div class="col-sm-6">
+          
+          <div><a href="family.html"class="t1">MOTHERHOOD</a></div>
+          <div><a href="family.html"class="t1">RELATIONSHIPS</a></div>
+          <div><a href="family.html"class="t1">FAMILY STYLE</a></div>
+          <div><a href="family.html"class="t1">MATERNITY</a></div>
+          <div><a href="family.html"class="t1">REAL TALK</a></div>
+            
+        <h4>Get Faisin Straight to your inbox</h4>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+
+</div>
+</div>
+</div>
+
+<div class="col-sm-1">
+  <button class="btn btn-primary b1" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo3">Life</button>
+
+<div class="offcanvas offcanvas-top" id="demo3">
+  <div class="offcanvas-header">
+    <!-- <h1 class="offcanvas-title">Heading</h1> -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/l1.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/l2.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/l3.jpg"style="height: 300px;width: 250px;">
+      </div>
+        
+        <div class="col-sm-6">
+          
+          <div><a href="life.html"class="t1">HOME DECOR</a></div>
+          <div><a href="life.html"class="t1">FITNESS</a></div>
+          <div><a href="life.html"class="t1">FOOD</a></div>
+          <div><a href="life.html"class="t1">REAL TALK</a></div>
+            
+        <h4>Get Faisin Straight to your inbox</h4>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+
+</div>
+</div>
+</div>
+
+<div class="col-sm-2">
+  <button class="btn btn-primary b1" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo4">Subscribe</button>
+  <div class="offcanvas offcanvas-top" id="demo4">
+
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Are we friends yet? Subscribe to Faisin.</h1>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div></div>
+</div>
+
+                                        <!-- contact start -->
+
+<div class="col-sm-2">
+  
+<button type="button" class="btn btn-primary b1" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Contact Us
+  </button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Subject">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here" required></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+                                         <!-- navbar end -->
+
+                                          <!-- carousel start-->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators" style="list-style:none;">
+          <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="images/t3.jpg" class="d-block w-100" style="height: 500px;">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/banner2.jpg" class="d-block w-100" style="height: 500px;">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/t2.jpg" class="d-block w-100" style="height: 500px;">
+          </div>
+        </div>
+        <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+                                         <!-- carousel end -->
+
+
+                                         <!-- card part-1 -->
+
+
+<div class="container py-5" id="card1">
+  <div class="row">
+    <div class="col-6 px-5">
+  <div class="card h-100 d-flex flex-column justify-content-center">
+    <!-- Center the image using Bootstrap's flexbox utilities -->
+    <div class="d-flex justify-content-center">
+      <img src="images/a2.jpg" style="height: 500px; width: 400px;" alt="Fall Wedding Dresses">
+    </div>
+    <div class="card-body d-flex flex-column align-items-center text-center">
+      <h6 class="card-title">DRESSES</h6>
+      <h3 class="card-subtitle">What to wear to every type of fall wedding</h3>
+      <p>Wedding season is my favorite season. I love getting dressed up and will take every opportunity to try on new outfits.</p><br>
+      <a href="story.html" class="card-link t1">Read Story</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-6 px-5">
+  <div class="card h-100 d-flex flex-column justify-content-center">
+    <!-- Center the image using Bootstrap's flexbox utilities -->
+    <div class="d-flex justify-content-center">
+      <img src="images/a1.jpg" style="height: 500px; width: 400px;" alt="Fall Wedding Dresses">
+    </div>
+    <div class="card-body d-flex flex-column align-items-center text-center">
+      <h6 class="card-title">BEAUTY</h6>
+      <h3 class="card-subtitle">My Current Beauty Lineup All On Sale</h3>
+      <p>I feel like my beauty routine has evolved over the years - I used to love having tons of palettes and lip colors to choose from, playing with different beauty</p>
+      <a href="story.html" class="card-link t1">Read Story</a>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+                                             <!-- card part-1 end -->
+
+
+                                              <!-- content start -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <img src="images/a3.jpg"style="height: 300px;width: 200px; 
+      margin-left: 30px;">
+      <img src="images/a4.jpg"style="height: 300px;width: 200px;">
+      <img src="images/a5.jpg"style="height: 300px;width: 200px;">
+      <img src="images/a6.jpg"style="height: 300px;width: 200px;">
+      <img src="images/a7.jpg"style="height: 300px;width: 200px;">
+      <img src="images/a8.jpg"style="height: 300px;width: 200px;">
+      <img src="images/a9.jpg"style="height: 300px;width: 200px;">
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-4">
+      <img src="images/a10.jpg"style="height: 600px;width: 400px;">
+    </div>
+
+    <div class="col-4 my-4">
+
+      <div class="card-body"><h6 class="card-title">
+        <a href="https://www.amazon.in/"class="t1">Amazon</a>
+      </h6>
+        <h3 class="card-subtitle">21 Looks Styling All<br> My Amazon Drop<br>Pieces For Different<br> Occasions</h3>
+        <p>I love all of you...but i need your help! it has always been a dream of mine to have a collab with Amazon and it's finally coming</p>
+        <a href="story.html" class="card-link t1">read story</a>
+      </div>
+    </div>
+    
+
+    <div class="col-4 my-4">
+      <center>
+      <div class="card-body"><h6 class="card-title">Latest Find</h6>
+        <h3 class="card-subtitle">SHOP NOW</h3>
+        <img src="images/a11.jpg" style="height: 300px;width: 200px;"class="p-4">
+        <p><a href="http://www.myntra.com/mailers/topwear/trendyol/trendyol-ribbed-acrylic-half-zipper-pullover/25137500/buy" class="t1">Ribbed Half-Zip Pullover</a>
+        </p>
+    </div>
+    <div class="card-body">
+        <img src="images/a12.webp" style="height: 200px;width: 200px;"class="p-4">
+        <p><a href="https://www.nykaafashion.com/aldo-barbie-mini-pink-sling-bag/p/16481908?utm_source=PDPShareWEB&utm_medium=PDPWEB&utm_campaign=PDPreferralWEB&utm_id=PDPShareBtnWEB" 
+          class="t1">Pink Micro Satchel</a></p>
+    </div>
+    </center>
+  </div>
+</div>
+</div>
+                                                <!-- content end -->
+
+                                                <!-- banner start -->
+
+<div class="container-fluid bg-black"style="height:400px;">
+  <div class="row">
+    <div class="col-sm-6 p-5">
+      <img src="images/a14.jpg" style="height:300px;width: 550px;
+      padding-left: 50px;">
+      
+    </div>
+    <div class="col-sm-6 p-5">
+      <div class="card-body" style="padding-top: 50px; font-family:Sitka Display Semibold;">
+        <h1 class="text-light animate__animated animate__backInRight">Join Our Girls Trip<br>to Pairs</h1>
+        <a href="#" class="card-link text-secondary">Explore All Videos</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+                                                  <!-- banner end -->
+
+                                                <!-- card part-2 start -->
+
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-4">
+      <img src="images/a20.jpg"style="height: 600px;width: 400px;">
+    </div>
+
+    <div class="col-4 my-4">
+
+      <div class="card-body"><h6 class="card-title">
+        <a href="https://www.amazon.in/"class="t1">Amazon</a></h6>
+        <h3 class="card-subtitle">Falls Best Trends<br>Already on Sale for
+          <br>Amazon Prime Day</h3>
+        <p>The Fall Amazon Prime Day event runs today and tomorrow and has so many great pieces to get you on track</p>
+        <a href="story.html" class="card-link t1">read story</a>
+      </div>
+    </div>
+    
+
+    <div class="col-4 my-1">
+      
+        <img src="images/a15.jpg"style="height: 600px;width: 400px;">
+        </div>
+    
+  </div>
+</div>
+</div>
+
+                                                  <!-- card part-2 end -->
+
+                                                  <!-- card part-3 start -->
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-4">
+      <img src="images/a21.jpg"style="height: 600px;width: 400px;">
+    </div>
+
+    <div class="col-4 my-4">
+
+      <div class="card-body"><h6 class="card-title">
+        <a href="https://www.amazon.in/"class="t1">Amazon</a></h6>
+        <h3 class="card-subtitle">Amazon Prime Day<br>2022 Sale Picks</h3>
+        <p>I put together some of my top-selects of home,Fashion, and other don't wanna miss deals for amazon prime day!</p>
+        <a href="story.html" class="card-link t1">read story</a>
+      </div>
+    </div>
+    
+
+    <div class="col-4 my-4">
+      <center>
+      <div class="card-body"><h6 class="card-title">Shop My Edits</h6>
+        <p class="card-subtitle">Hello Faisin Presets</p>
+        <img src="images/a16.jpg" style="height: 300px;width: 200px;"class="p-4">
+        <p><a href="https://www.urbanladder.com/"class="t1">Presets: Home Edition</a></p>
+    </div>
+    <div class="card-body">
+        <img src="images/a17.webp" style="height: 200px;width: 200px;"class="p-4">
+        <p><a href="https://www.makemytrip.com/"class="t1">Presets: City Edition</a></p>
+    </div>
+    </center>
+  </div>
+</div>
+</div>
+
+                                               <!-- card part-3 end -->
+
+                                              <!-- card part-4 start -->
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top"style="height: 500px;"src="images/a1.jpg" alt="card image">
+    <div class="card-body">
+      <h4 class="card-title">What I Wore: Weekly<br>Round Up</h4>
+      <a href="story.html" class="card-link t1">read story</a>
+    </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top"style="height: 500px;"src="images/a19.jpg" alt="card image">
+    <div class="card-body">
+      <h4 class="card-title">Mom Will Love These Gift Ideas,No Matter Your Budget</h4>
+      <a href="story.html" class="card-link t1">read story</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top"style="height: 500px;"src="images/a22.jpg" alt="card image">
+    <div class="card-body">
+      <h4 class="card-title">Yes You Can take your activewear Outside the gym.</h4>
+      <a href="story.html" class="card-link t1">read story</a>
+    </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+                                         <!-- card part-4 end -->
+
+                                            <!-- footer start -->
+
+
+
+<div class="container-fluid bg-dark size justify-content-center py-3"style="margin-top: 40px;">
+    <div class="row">
+      <div class="col-2 py-3">
+        <span class="text1 px-3">Faisin.All RIGHTS RESERVED.</span>
+      </div>
+      <div class="col-sm-1 py-3">
+      <a href="about.html" class="text1 ">ABOUT</a>
+    </div>
+
+
+    <div class="col-sm-1 py-3">
+      <a href="shop.html"class="text1">SHOP</a>
+     
+    </div>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary b1" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Contact Us
+  </button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Subject">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here" required></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+<div class="col-sm-1 border-end ">
+
+       <button class="btn btn-primary b1" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo4">Subscribe</button>
+  <div class="offcanvas offcanvas-top" id="demo4">
+
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Are we friends yet? Subscribe to Faisin.</h1>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div></div>
+      
+    </div>
+
+    <div class="col-sm-3 px-5 py-2">
+    <span class="text1">SOCIAL</span><br>
+    <a href="https://www.facebook.com/profile.php?id=100055553382944&mibextid=LQQJ4d" class="text px-1"><i class="fa-brands fa-facebook fa-xl"></i></a>
+    <a href="https://www.instagram.com/anjalii_0508?igsh=MTRhbmFtcHE1aTlvOA%3D%3D&utm_source=qr"class="text px-1"><i class="fa-brands fa-instagram fa-xl"></i></a>
+    <a href="https://www.youtube.com/"class="text px-1"><i class="fa-brands fa-youtube fa-xl"></i></a>
+    <a href="https://in.pinterest.com/"class="text px-1"><i class="fa-brands fa-pinterest-p fa-xl"></i></a>
+    </div>
+    <div class="col-sm-2 py-3">
+      <span class="text1">Design+Developed by Anjali Yadav</span>
+    </div>
+
+   </div>
+   </div>
+
+
+                                            <!-- footer end -->
+
+
+
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var positiontop = $(document).scrollTop();
+      console.log(positiontop);
+
+      if ((positiontop > 10) && (positiontop < 213)) {
+        $('#card1').addClass('animate__animated animate__bounceInLeft');
+        $('#card2').addClass('animate__animated animate__bounceInLeft');
+      }
+    });
+  });
+</script>
+
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

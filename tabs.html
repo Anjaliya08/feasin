@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tabs</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			$('#myTab a').on('click',function(e){
+				e.preventDefault();
+				$(this).tab('show');
+			})
+		})
+	</script>
+
+</head>
+<body>
+
+	<div class="container mb-5">
+		<h2 class="py-3 text-center">TABS</h2>
+		<div class="row py-3 justify-content-center">
+			<div class="col">
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="nav-item">
+					<a class="nav-link active" href="#home">HOME</a></li>
+					<li class="nav-item">
+					<a class="nav-link" href="#profile">Profile</a></li>	
+					<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a></li>	
+				</ul>
+
+	<div class="tab-content" id="myTabContent">
+		<div id="home" class="container tab-pane fade show active"><br>
+			<h3>HOME</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p></div>
+
+        <div id="profile" class="container tab-pane fade"><br>
+			<h3>Profile</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p></div>
+		<div id="contact" class="container tab-pane fade"><br>
+			<h3>Contact</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="col md-6">
+	<ul class="nav nav-pills" id="tab-pills">
+		<li class="nav-item">
+			<a class="nav-link active" data-bs-toggle="nav-pills" href="#home1">home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-bs-toggle="pill" href="#profile1">Profile</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-bs-toggle="pill" href="#contact1">contact</a>
+		</li>
+	
+	</ul>
+<div class="tab-content" id="myTabContent">
+	<div id="home1" class="container tab-pane fade show active"><br>
+		<h3>home</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	<div id="profile1" class="container tab-pane fade show "><br>
+		<h3>profile</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	<div id="contact1" class="container tab-pane fade show "><br>
+		<h3>contact</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	</div>
+</div>
+</div></div>
+
+<div class="row">
+	<div class="col-md-3">
+		<ul class="nav nav-pills flex-column"  id="v-mytab">
+			<li class="nav-item">
+				<a class="nav-link active" data-bs-toggle="pill"href="#home2">home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " data-bs-toggle="pill"href="#profile2">profile</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="pill"href="#contact2">contact</a>
+			</li>
+		</ul>
+	</div>
+
+<div class="col-md-9">
+	<div class="tab-content" id="mytab-v-content">
+		<div id="home2" class="container tab-pane fade show active"><br>
+			<h3>home</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p></div>
+		<div id="profile2" class="container tab-pane fade show "><br>
+			<h3>profile</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p></div>
+		<div id="contact2" class="container tab-pane fade show "><br>
+			<h3>contact</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p></div>
+	</div>
+</div>
+</div>
+
+
+	</div>
+			
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<style>
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+  width: 100%;
+}
+</style>
+<body>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-2">
+  <img src="images/fa.jpg" style="width:200px; height: 200px;">
+</div>
+<div class="col-sm-2">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/login.jpg" style="height:100px; width:100px;" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+
+<div class="col-sm-1">
+<div class="myDIV"><a href="#">beauty</a></div>
+<div class="hide">
+  <div class="row">
+      <div class="col-sm-2">
+        <img src="images/b1.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/b2.jpg"style="height: 300px;width: 250px;">
+      </div>
+      <div class="col-sm-2">
+        <img src="images/b3.jpg"style="height: 300px;width: 250px;">
+      </div>
+        
+        <div class="col-sm-6">
+          <ul>
+          <li>Hair</li>
+          <li>Makeup</li>
+          <li>Skincare</li>
+          <li>Tutorials</li>
+            </ul>
+        <h4>Get Faisin Straight to your inbox</h4>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+
+</div>
+</div></div>
+
+
+</div></div>
+
+
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
